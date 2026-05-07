@@ -1,0 +1,68 @@
+Bloque 1 - HTML5
+    1-Para que sirve el Atributo "Name", En que se diferencia de ID.
+        el name se utiliza como requisito del CEO (en servidor, para el input es obligatorio). El ID se suele utilizar mas para 
+        hacer llamados desde el CSS a algun elemento específico (en id).
+    2-Escribe cod Html, para un formulario con Input de Mail, Checkbox "Aceptar Términos" y Botón de Envio.
+        RESPUESTA
+            <label for="estafa_num">Ingrese numero de tarjeta: </label>
+            <input type="text" id="estafa_num" name="chorro_num">
+            <label for="estafa_cod">Ingrese codigo de seguridad de su tarjeta: </label>
+            <input type="text" id="estafa_cod" name="chorro_cod">
+            <label for="estafa_fcha">Ingrese fecha de caducidad de su tarjeta sin "/": </label>
+            <input type="text" id="estafa_fcha" name="chorro_fcha">
+            <label for="estafa_correo">Ingrese numero de tarjeta: </label>
+            <input type="mail" id="estafa_correo" name="chorro_correo">
+            <input type="checkbox" id="estafa_check" name="chorro_check" value="Concentimiento">
+            <label for="estafa_check"> Doy mi concentimiento y no bloquearé la tarjeta.</label><br>
+            <input type="submit" value="Regalar">
+    3-Que sucede si el formulario no tiene atributo Method especificado.
+        a)se envian por POST.
+        b)se envian por GET.✅
+        c)No se envia y arroja error.
+    4-Desarrollar: Etiqueta <Label> como se vincula al con un input.
+        <label for="vinculo">Se vincula mediante id y for</label>
+        <input type="text" id="vinculo" name="como_vinculo">
+Bloque 2 - Css
+    5-Crea Css de clase "parrafo_1", que modifique la fuente Arial, texto Verde y Fondo #08A74B.
+        b-Todos los elementos <H2>, llevar Tamaño 20px.
+        c-Parrafo con ID= "p1" muestre el texto en negrita.
+        RESPUESTA (desplegable)
+            .parrafo_1{
+                family-font: Arial;
+                color: green;
+                background-color: #08A74B;
+            }
+            h2{
+                font-size: 20px;
+            }
+            #p1{
+                font-style: Bold;
+            }
+    6-Diferencia entre position: Relative y Absolute.
+        a)Relative se mueve respecto a su pos original; Absolute respecto al ancestro mas cercano.
+        b)Relative saca al elemento del flujo. Absolute no. ✅
+        c)No hay diferencia si el contenedor padre es body.
+    7-Como centrar un div dentro de un padre que tiene display: flex.
+        justify-content: center;
+        alain-items: center;
+    8-propiedad usar para elementos que no entran en la pantalla(hijos de un flexbox).
+        a)flex-direction: column;
+        b)flex-wrap: wrap;✅
+        c)justify-content: space-around;
+Bloque 3 - JavaScript
+    9- Cambiar color de Fondo de parrafos hijos de un div de clase "lista" alternando color (Pares: #ffffff e Impares: #a0afaf).
+    10- Describe pasos para que un Script lea un dato de Input, lo procece y lo muestre como <span>
+    11- forma correcta de declarar una variable que no se altera a lo largo del programa.
+        a)var
+        b)let
+        c)const✅
+    12-crea función llamada Saludar() que tome un valor de un input (id="usuario") y mueste una alerta "Hola [nombre]".
+Bloque 4 - Eventos y validación:
+    13-para ejecutar una función apenas el usuario termina de escribir, se usa:
+        a)onclick
+        b)oninput✅
+        c)onblur
+    14-crea un listener(escuchador) en JS para que al hacer click en un boton con ID=BTN-Color, se cambie el color de fondo de la pag. document.body a amarillo
+    15-que utilidad brinda el atributo "disabled" en un campo de texto HTML?
+        hace que este se oculte?
+
