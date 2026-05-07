@@ -4,17 +4,19 @@ Bloque 1 - HTML5
         hacer llamados desde el CSS a algun elemento específico (en id).
     2-Escribe cod Html, para un formulario con Input de Mail, Checkbox "Aceptar Términos" y Botón de Envio.
         RESPUESTA
-            <label for="estafa_num">Ingrese numero de tarjeta: </label>
-            <input type="text" id="estafa_num" name="chorro_num">
-            <label for="estafa_cod">Ingrese codigo de seguridad de su tarjeta: </label>
-            <input type="text" id="estafa_cod" name="chorro_cod">
-            <label for="estafa_fcha">Ingrese fecha de caducidad de su tarjeta sin "/": </label>
-            <input type="text" id="estafa_fcha" name="chorro_fcha">
-            <label for="estafa_correo">Ingrese numero de tarjeta: </label>
-            <input type="mail" id="estafa_correo" name="chorro_correo">
-            <input type="checkbox" id="estafa_check" name="chorro_check" value="Concentimiento">
-            <label for="estafa_check"> Doy mi concentimiento y no bloquearé la tarjeta.</label><br>
-            <input type="submit" value="Regalar">
+            <form name="F1" method="POST" action="destino">
+                <label for="estafa_num">Ingrese numero de tarjeta: </label>
+                <input type="text" id="estafa_num" name="chorro_num">
+                <label for="estafa_cod">Ingrese codigo de seguridad de su tarjeta: </label>
+                <input type="text" id="estafa_cod" name="chorro_cod">
+                <label for="estafa_fcha">Ingrese fecha de caducidad de su tarjeta sin "/": </label>
+                <input type="text" id="estafa_fcha" name="chorro_fcha">
+                <label for="estafa_correo">Ingrese numero de tarjeta: </label>
+                <input type="mail" id="estafa_correo" name="chorro_correo">
+                <input type="checkbox" id="estafa_check" name="chorro_check" value="Concentimiento">
+                <label for="estafa_check"> Doy mi concentimiento y no bloquearé la tarjeta.</label><br>
+                <button type="submit" value="Regalar">
+            </form>
     3-Que sucede si el formulario no tiene atributo Method especificado.
         a)se envian por POST.
         b)se envian por GET.✅
@@ -36,22 +38,27 @@ Bloque 2 - Css
                 font-size: 20px;
             }
             #p1{
-                font-style: Bold;
+                font-weight: Bold;
             }
     6-Diferencia entre position: Relative y Absolute.
-        a)Relative se mueve respecto a su pos original; Absolute respecto al ancestro mas cercano.
-        b)Relative saca al elemento del flujo. Absolute no. ✅
+        a)Relative se mueve respecto a su pos original; Absolute respecto al ancestro mas cercano. (si)
+        b)Relative saca al elemento del flujo. Absolute no. (NO)
         c)No hay diferencia si el contenedor padre es body.
     7-Como centrar un div dentro de un padre que tiene display: flex.
         justify-content: center;
-        alain-items: center;
+        align-items: center;
     8-propiedad usar para elementos que no entran en la pantalla(hijos de un flexbox).
         a)flex-direction: column;
         b)flex-wrap: wrap;✅
         c)justify-content: space-around;
 Bloque 3 - JavaScript
     9- Cambiar color de Fondo de parrafos hijos de un div de clase "lista" alternando color (Pares: #ffffff e Impares: #a0afaf).
+        document.querySelector(".lista p:nth-child(odd)").style.backgroundColor = #a0afaf //impares
+        document.querySelector(".lista p:nth-child()").style.backgroundColor = #ffffff; //pares
     10- Describe pasos para que un Script lea un dato de Input, lo procece y lo muestre como <span>
+        <div id="div1">Contenido Default </div>
+        var texto1 = document.F1.texto1.value;
+        document.getElementById("div1").innerHTML = "tex ingresado: " + texto1;
     11- forma correcta de declarar una variable que no se altera a lo largo del programa.
         a)var
         b)let
@@ -61,7 +68,7 @@ Bloque 4 - Eventos y validación:
     13-para ejecutar una función apenas el usuario termina de escribir, se usa:
         a)onclick
         b)oninput✅
-        c)onblur
+        c)onblur // pierde el foco
     14-crea un listener(escuchador) en JS para que al hacer click en un boton con ID=BTN-Color, se cambie el color de fondo de la pag. document.body a amarillo
     15-que utilidad brinda el atributo "disabled" en un campo de texto HTML?
         hace que este se oculte?
